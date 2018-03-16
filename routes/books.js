@@ -1,9 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
+const books = [
+  { id: 1, title: "harry potter", summary: "harry survives" },
+  { id: 2, title: "lotr", summary: "some summary" }
+];
+
 /* GET books listing. */
 router.get("/", (req, res, next) => {
-  res.json({ message: "respond with all books" });
+  res.json({ message: "GET /books succeeded", books: books });
 });
 
 router.get("/:id", (req, res, next) => {
@@ -11,7 +16,11 @@ router.get("/:id", (req, res, next) => {
 });
 
 router.post("/", (req, res, next) => {
-  res.json({ message: `create new book using data from ${req.body}` });
+  const { title, summary } = req.body;
+  newBook = { id: books.length + 1, title, summary };
+  books.push(newBook);
+
+  res.json({ message: `GET /books succeeded`, book: newBook });
 });
 
 router.put("/:id", (req, res, next) => {
