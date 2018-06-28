@@ -2,7 +2,7 @@
 
 ## Getting started
 - Fork and clone repo
-- Install dependencies: `yarn install`
+- Install dependencies: `npm install`
 - Start application: `nodemon server.js`
 
 ### Assignment: Adding tests
