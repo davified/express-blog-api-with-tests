@@ -8,7 +8,7 @@ describe("routes/index", () => {
 
       .expect(200)
       .expect("Content-Type", /json/)
-      .expect({ message: "hello express-blog-api" });
+      .expect({ message: "hello express!" });
   });
 
   it("the same test using .then()", () => {
@@ -18,7 +18,15 @@ describe("routes/index", () => {
       .then(response => {
         expect(response.status).toEqual(200);
         expect(response.header["content-type"]).toContain("application/json");
-        expect(response.body).toEqual({ message: "hello express-blog-api" });
+        expect(response.body).toEqual({ message: "hello express!" });
       });
+  });
+
+  it("the same test using async await", async () => {
+    const response = await request(app).get("/");
+
+    expect(response.status).toEqual(200);
+    expect(response.header["content-type"]).toContain("application/json");
+    expect(response.body).toEqual({ message: "hello express!" });
   });
 });
