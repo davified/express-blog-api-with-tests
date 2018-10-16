@@ -9,14 +9,14 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.9",
-    "ejs": "~2.5.7",
-    "express": "~4.15.5",
-    "jest": "^23.0.0-alpha.0",
-    "morgan": "~1.9.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "debug": "^4.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "jest": "^23.6.0",
+    "morgan": "^1.9.1",
     "serve-favicon": "~2.4.5",
-    "supertest": "^3.0.0"
+    "supertest": "^3.3.0"
   }
 }
