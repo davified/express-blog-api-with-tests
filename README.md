@@ -10,14 +10,12 @@
 
 ### Part 1: Implement the API
 
-- In `app.js`, define functions to "CRUD" books
+- In `books.js`, define functions to "CRUD" books
   - GET /books
   - GET /books/:id
   - POST /books
   - PUT /books/:id
   - DELETE /books/:id
-
-- Refactor the handler functions into a separate file using `express.Router()`
 
 ### Part 2: Write tests for the book API
 

@@ -7,28 +7,14 @@ const books = [
 ];
 
 /* GET books listing. */
-router.get("/", (req, res, next) => {
-  res.json({ message: "GET /books succeeded", books: books });
-});
+router.get("/", (req, res, next) => {});
 
-router.get("/:id", (req, res, next) => {
-  res.json({ message: `get book with id ${req.params.id}` });
-});
+router.get("/:id", (req, res, next) => {});
 
-router.post("/", (req, res, next) => {
-  const { title, summary } = req.body;
-  newBook = { id: books.length + 1, title, summary };
-  books.push(newBook);
+router.post("/", (req, res, next) => {});
 
-  res.json({ message: `GET /books succeeded`, book: newBook });
-});
+router.put("/:id", (req, res, next) => {});
 
-router.put("/:id", (req, res, next) => {
-  res.json({ message: `update book with id ${req.params.id}` });
-});
-
-router.delete("/:id", (req, res, next) => {
-  res.json({ message: `delete book with id ${req.params.id}` });
-});
+router.delete("/:id", (req, res, next) => {});
 
 module.exports = router;
